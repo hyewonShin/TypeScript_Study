@@ -31,13 +31,46 @@ let gender: string = "female";
 let subject: string = "Javascript";
 let courseCompleted: boolean = false;
 
-function getStudentDetails(studentID: number): {
-  studentID: number;
+let student1 = {
+  studentID: 12345,
+  studentName: "Jenny Kim",
+  age: 21,
+  gender: "female",
+  subject: "Javascript",
+  courseCompleted: false,
+};
+
+// 인터페이스르 타입으로 가지는 값은 인터페이스의 구조를 그 값으로 가지도록 강제된다
+interface Student {
+  readonly studentID: number;
   studentName: string;
-  age: number;
-} {
-  return null;
+  age?: number; //옵셔널(선택적) 프로퍼티
+  gender: string;
+  subject: string;
+  courseCompleted: boolean;
+
+  // 두가지 방법으로 사용가능
+  //addComment(comment: string): string;
+  addComment?: (comment: string) => string;
 }
+
+function getStudentDetails(studentID: number): Student {
+  return {
+    studentID: 12345,
+    studentName: "Jenny Kim",
+    // age: 21,
+    gender: "female",
+    subject: "Javascript",
+    courseCompleted: false,
+  };
+}
+
+function saveStudentDetails(student: Student): void {
+  // ReadOnly 프로퍼티는 읽기 전용 프로퍼티로 객체 생성시 할당된 프로퍼티의 값을 바꿀 수 없다
+  // student.studentID = 123;
+}
+
+saveStudentDetails(student1);
 
 // 만일 함수가 특정 값을 반환하는 경우 반환되는 타입을 명시해주면 된다.
 // 아무것도 반환하지 않는다는다면 :void를 명시해준다.

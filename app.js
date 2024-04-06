@@ -26,9 +26,29 @@ var age = 21;
 var gender = "female";
 var subject = "Javascript";
 var courseCompleted = false;
+var student1 = {
+    studentID: 12345,
+    studentName: "Jenny Kim",
+    age: 21,
+    gender: "female",
+    subject: "Javascript",
+    courseCompleted: false,
+};
 function getStudentDetails(studentID) {
-    return null;
+    return {
+        studentID: 12345,
+        studentName: "Jenny Kim",
+        // age: 21,
+        gender: "female",
+        subject: "Javascript",
+        courseCompleted: false,
+    };
 }
+function saveStudentDetails(student) {
+    // ReadOnly 프로퍼티는 읽기 전용 프로퍼티로 객체 생성시 할당된 프로퍼티의 값을 바꿀 수 없다
+    // student.studentID = 123;
+}
+saveStudentDetails(student1);
 // 만일 함수가 특정 값을 반환하는 경우 반환되는 타입을 명시해주면 된다.
 // 아무것도 반환하지 않는다는다면 :void를 명시해준다.
 // void나 any 타입이 아닌 경우에 아무런 값도 반화하지 않는다면 에러가 난다.
