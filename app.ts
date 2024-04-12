@@ -1,3 +1,9 @@
+enum GenderType {
+  Male = "male",
+  Female = "female",
+  human = "human",
+}
+
 // Type Inference(타입추론)
 // 예시 1
 let a = 5;
@@ -16,9 +22,9 @@ let student = {
 // student.name = 10; => 타입추론으로 인하여 에러발생
 
 //예시 3
-function calculateCodingIQ(lostPoint) {
-  return 100 - lostPoint;
-}
+// function calculateCodingIQ(lostPoint) {
+//   return 100 - lostPoint;
+// }
 // 함수에 마우스를 올리면 function calculateCodingIQ(lostPoint: any): number 과 같이 lostPoint의 형식을 숫자형으로 추론한 것을 알 수있음.
 
 // 타입명시
@@ -35,7 +41,7 @@ let student1 = {
   studentID: 12345,
   studentName: "Jenny Kim",
   age: 21,
-  gender: "female",
+  gender: GenderType.Female,
   subject: "Javascript",
   courseCompleted: false,
 };
@@ -45,7 +51,7 @@ interface Student {
   readonly studentID: number;
   studentName: string;
   age?: number; //옵셔널(선택적) 프로퍼티
-  gender: string;
+  gender: GenderType;
   subject: string;
   courseCompleted: boolean;
 
@@ -59,7 +65,7 @@ function getStudentDetails(studentID: number): Student {
     studentID: 12345,
     studentName: "Jenny Kim",
     // age: 21,
-    gender: "female",
+    gender: GenderType.Male,
     subject: "Javascript",
     courseCompleted: false,
   };
@@ -75,3 +81,5 @@ saveStudentDetails(student1);
 // 만일 함수가 특정 값을 반환하는 경우 반환되는 타입을 명시해주면 된다.
 // 아무것도 반환하지 않는다는다면 :void를 명시해준다.
 // void나 any 타입이 아닌 경우에 아무런 값도 반화하지 않는다면 에러가 난다.
+
+// Enum : 연관된 아이템들을 함께 묶어서 표현 할 수 있는 수단이다.
