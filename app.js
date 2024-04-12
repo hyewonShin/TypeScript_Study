@@ -7,18 +7,18 @@ var GenderType;
 })(GenderType || (GenderType = {}));
 // Type Inference(타입추론)
 // 예시 1
-let a = 5;
+// let a = 5;
 // a = "hello";
 // 타입스크립트는 변수 a를 숫자(Number)로 추론 하기 때문에 문자(String)형식으로 변경하려하면 에러발생.
 //예시 2
-let student = {
-    name: "jack",
-    courseL: "Getting Started with TypeScript",
-    condingIQ: 80,
-    code: function () {
-        console.log("brain is working hard");
-    },
-};
+// let student = {
+//   name: "jack",
+//   courseL: "Getting Started with TypeScript",
+//   condingIQ: 80,
+//   code: function () {
+//     console.log("brain is working hard");
+//   },
+// };
 // student.name = 10; => 타입추론으로 인하여 에러발생
 //예시 3
 // function calculateCodingIQ(lostPoint) {
@@ -27,12 +27,12 @@ let student = {
 // 함수에 마우스를 올리면 function calculateCodingIQ(lostPoint: any): number 과 같이 lostPoint의 형식을 숫자형으로 추론한 것을 알 수있음.
 // 타입명시
 // : 변수를 선언할 때, 변수 값의 타입을 명시함으로써 변수 값의 데이터 타입을 지정
-let studentID = 12345;
-let studentName = "Jenny Kim";
-let age = 21;
-let gender = "female";
-let subject = "Javascript";
-let courseCompleted = false;
+// let studentID: number = 12345;
+// let studentName: string = "Jenny Kim";
+// let age: number = 21;
+// let gender: string = "female";
+// let subject: string = "Javascript";
+// let courseCompleted: boolean = false;
 let student1 = {
     studentID: 12345,
     studentName: "Jenny Kim",
@@ -45,8 +45,7 @@ function getStudentDetails(studentID) {
     return {
         studentID: 12345,
         studentName: "Jenny Kim",
-        // age: 21,
-        gender: GenderType.Male,
+        gender: "male",
         subject: "Javascript",
         courseCompleted: false,
     };

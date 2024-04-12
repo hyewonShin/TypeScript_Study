@@ -6,19 +6,19 @@ enum GenderType {
 
 // Type Inference(타입추론)
 // 예시 1
-let a = 5;
+// let a = 5;
 // a = "hello";
 // 타입스크립트는 변수 a를 숫자(Number)로 추론 하기 때문에 문자(String)형식으로 변경하려하면 에러발생.
 
 //예시 2
-let student = {
-  name: "jack",
-  courseL: "Getting Started with TypeScript",
-  condingIQ: 80,
-  code: function () {
-    console.log("brain is working hard");
-  },
-};
+// let student = {
+//   name: "jack",
+//   courseL: "Getting Started with TypeScript",
+//   condingIQ: 80,
+//   code: function () {
+//     console.log("brain is working hard");
+//   },
+// };
 // student.name = 10; => 타입추론으로 인하여 에러발생
 
 //예시 3
@@ -30,12 +30,12 @@ let student = {
 // 타입명시
 // : 변수를 선언할 때, 변수 값의 타입을 명시함으로써 변수 값의 데이터 타입을 지정
 
-let studentID: number = 12345;
-let studentName: string = "Jenny Kim";
-let age: number = 21;
-let gender: string = "female";
-let subject: string = "Javascript";
-let courseCompleted: boolean = false;
+// let studentID: number = 12345;
+// let studentName: string = "Jenny Kim";
+// let age: number = 21;
+// let gender: string = "female";
+// let subject: string = "Javascript";
+// let courseCompleted: boolean = false;
 
 let student1 = {
   studentID: 12345,
@@ -51,7 +51,7 @@ interface Student {
   readonly studentID: number;
   studentName: string;
   age?: number; //옵셔널(선택적) 프로퍼티
-  gender: GenderType;
+  gender: "male" | "female" | "human"; //리터럴 타입
   subject: string;
   courseCompleted: boolean;
 
@@ -64,8 +64,7 @@ function getStudentDetails(studentID: number): Student {
   return {
     studentID: 12345,
     studentName: "Jenny Kim",
-    // age: 21,
-    gender: GenderType.Male,
+    gender: "male",
     subject: "Javascript",
     courseCompleted: false,
   };
