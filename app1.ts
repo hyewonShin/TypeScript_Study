@@ -9,3 +9,18 @@ let price: number | string = 5;
 price = "green";
 price = 1;
 // price = true; ==> 지정된 타입이 아니기 때문에 에러 발생
+
+// 타입 별칭(Type Aliases)
+// 특정 타입이나 인터페이스를 참조할 수 있는 타입 변수.
+type StrOrNum = number | string;
+let totalCost: number;
+let orderID: StrOrNum;
+
+const calculateTotalCost = (price: StrOrNum, qty: number): void => {};
+
+const findOrderID = (
+  customer: { costomerId: StrOrNum; name: string },
+  productId: StrOrNum
+): StrOrNum => {
+  return orderID;
+};

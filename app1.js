@@ -8,4 +8,9 @@ someValue = true;
 let price = 5;
 price = "green";
 price = 1;
-// price = true; ==> 지정된 타입이 아니기 때문에 에러 발생
+let totalCost;
+let orderID;
+const calculateTotalCost = (price, qty) => { };
+const findOrderID = (customer, productId) => {
+    return orderID;
+};
