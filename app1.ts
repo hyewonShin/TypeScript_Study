@@ -24,3 +24,18 @@ const findOrderID = (
 ): StrOrNum => {
   return orderID;
 };
+
+// 타입 가드(Type Guards)
+// typeof Operator : typeof 연산자와 조건문 사용
+type StringOrNum = string | number;
+let itemPrice: number;
+
+const setItemPrice = (price: StringOrNum): void => {
+  if (typeof price === "string") {
+    itemPrice = 0;
+  } else {
+    itemPrice = price;
+  }
+};
+
+setItemPrice("123");

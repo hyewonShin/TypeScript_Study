@@ -14,3 +14,13 @@ const calculateTotalCost = (price, qty) => { };
 const findOrderID = (customer, productId) => {
     return orderID;
 };
+let itemPrice;
+const setItemPrice = (price) => {
+    if (typeof price === "string") {
+        itemPrice = 0;
+    }
+    else {
+        itemPrice = price;
+    }
+};
+setItemPrice("123");
