@@ -31,3 +31,5 @@ function sendGreeting4(message4 = "기본값1", userName4 = "기본값2") {
 sendGreeting4(); // 기본값1 기본값2
 sendGreeting4("Hello"); // Hello 기본값2
 sendGreeting4("Hello", "sunny"); // Hello sunny
+// 화살표 함수 예제
+const sendGreeting5 = (message5 = "기본값1", userName5 = "기본값2") => console.log(`${message5}`, `${userName5}`);
