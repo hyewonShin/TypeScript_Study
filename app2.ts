@@ -23,7 +23,7 @@ function sendGreeting3(message3: string, userName3?: number): void {
 // - 함수에 정의된 모든 매개 변수가 함수에 필요하다고 가정하기 때문에 에러발생
 // sendGreeting3("Hello");
 
-// 2-1)선택적 매개변수 사용(매개변수 뒤에 ? 붙임)
+// 2-1)선택적 매개변수 사용(매개변수 뒤에 ? 를 붙여 사용)
 // - 선택적 매개변수들은 필수 매개변수 뒤에 위치해야된다.
 // - 선택적 매개변수 오른쪽에 위치한 매개변수들은 ?를 붙이지 않아도 선택적 매개변수로 인식함.
 sendGreeting3("Hello"); // Hello undefined
